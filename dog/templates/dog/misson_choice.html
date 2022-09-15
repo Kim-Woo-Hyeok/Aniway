@@ -1,0 +1,38 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+  <div class="choice_body">
+        <div class="choice_center">
+
+            <div class="choice_nav_top">
+                <h1 style=" padding-top: 50px; padding-bottom: 30px; font-size: 65px">
+                       <img src="/static/img/mission_name.png"></h1>
+
+            </div>
+
+            <div class="mission_choice_set">
+                <a href="{% url "dog:life_edu" %}"> <img class="mission_choice1" src="/static/img/misson_choice1.png"></a>
+                <a href="{% url "dog:mission_edu" %}"><img  class="mission_choice2" src="/static/img/misson_choice2.png"></a>
+            </div>
+
+            <div class="mission_other_container">
+                <div class="other_contain_title">
+                      Other
+                </div>
+                <div class="other_contain_text">
+                    입양 시 필수교육, 반려견 크기별 필수교육 등 추가적인 교육을 제공합니다.
+                </div>
+                <div class="other_contain_button">
+                <a href="{% url "dog:need_edu" %}"><img src="/static/img/oher1.png" class="other_contain_button_width"></a>
+                     <a href="{% url "dog:need_edu" %}"><img src="/static/img/oher2.png" class="other_contain_button_width"></a>
+                    <a href="{% url "dog:need_edu" %}"> <img src="/static/img/oher3.png" class="other_contain_button_width"></a>
+                    <a href="{% url "dog:need_edu" %}"> <img src="/static/img/oher4.png" class="other_contain_button_width"></a>
+                </div>
+
+            </div>
+
+        </div>
+  </div>
+
+{% endblock %}

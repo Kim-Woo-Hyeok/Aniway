@@ -1,0 +1,45 @@
+{% extends "dog/base.html" %}
+
+{% block content %}
+
+
+    <div class="finish_body">
+
+    <div class="finish_top">
+                <img style=" width: 200px; " src="/static/img/login_logo2.png">
+                <div class="finish_top_nav">
+                    회원가입
+                </div>
+            </div>
+
+    <div class="finish_box">
+        <div class="finish_box_text">
+            <div class="finish_box_text1">
+                회원가입이 완료되었습니다.<br>
+                사이트 내의 다양한 교육서비스를 이용하실 수 있습니다.
+            </div>
+            <div class="finish_box_text2">
+                김우혁님의 회원가입을 진심으로 환영합니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="finish_button_line">
+        <div class="finish_button_line_between">
+        <a href="{% url "dog:dog_main" %}" class="finish_home">
+            홈으로
+        </a>
+         <a href="{% url "dog:login" %}" class="finish_my_page">
+            마이페이지
+        </a>
+            </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+{% endblock %}

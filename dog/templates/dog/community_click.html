@@ -1,0 +1,57 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+    <div  id="scroll1" class="post_body">
+        <div class="post_top_box">
+            <a style=" color:#000000; text-decoration: none;" href="{% url 'dog:community' %}">
+                <div class="post_community">
+                    공지사항
+                </div>
+            </a>
+            <div class="post_post">
+                <div class="post_title">
+                    {{ communitys.title }}
+                </div>
+                <div class="post_create">
+                       {{ communitys.create }}
+                </div>
+                <div class="post_counting">
+                    조회수:&nbsp; {{ communitys.counting }}
+                </div>
+                <div class="post_text">
+                    <pre style='margin-top: 5px; text-align: left; white-space:pre-wrap; word_wrap:break-word; word-break: break-all;'>{{ communitys.text }}</pre>
+                    <div class="post_img">
+                        {% if communitys.img %}
+                        <img src="{{ communitys.img.url }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="post_button">
+                 <a style=" color:#000000; text-decoration: none;" href="{% url 'dog:community' %}">
+                     <div class="post_button_list">
+                      목록
+                     </div>
+                 </a>
+                <a style="text-decoration: none;" href="#scroll1">
+                    <div class="post_button_top">
+                        ↑ Top
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    $(document).ready(function($) {
+            $(".post_button_top").click(function(event){
+                console.log(".post_button_top");
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 0);
+            });
+        });
+    </script>
+
+{% endblock %}

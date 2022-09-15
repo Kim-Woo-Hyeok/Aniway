@@ -1,0 +1,148 @@
+{% extends "dog/base.html" %}
+
+{% block content %}
+
+
+
+<div class="need_eud_body">
+    <div class="need_eud_center">
+        <div class="need_edu_title">
+            첫 입양 시 필수교육
+        </div>
+        <div class="need_edu_text">
+            <div class="need_edu_tool" style="font-weight: bold; color: red;"> ※ 모든 훈련의 주의사항</div>
+            <div class="need_edu_tool">1. 강아지가 집중 가능한 시간은 10분! 하루 중에도 짧게 해주는게 효과적이에요</div>
+            <div class="need_edu_tool">2. 강아지가 집중하지 못하면 즉시 중단하세요</div>
+            <div class="need_edu_tool">3. 모든 훈련은 '놀이'처럼 진행해야 합니다.</div>
+            <div class="need_edu_tool">4. 지루해지기 전에 훈련을 멈춰야 해요. 그래야 반려견이 다음 훈련을 기다립니다.</div>
+        </div>
+        <div class="need_edu_select">
+            <img style="width: 100%; max-width: 60px;" src="/static/img/dog_small.png">
+            <div style="margin-left: 23px;"> 모든 주의 사항을 숙지하였으면 필수 교육을 시작해 볼까요?</div>
+        </div>
+        <div class="need_edu_select_box">
+            <div class="need_edu_mission">
+
+                <div class="need_edu_mission_select">
+                    <div id="edu1" class="need_img_center">
+                    <img data-direction="need1" class="need_img" src="/static/img/need_edu1.png">
+                        </div>
+                    <div class="need_img_text">배변 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need2" class="need_img" src="/static/img/need_edu2.png">
+                        </div>
+                    <div class="need_img_text">사회화 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need3" class="need_img" src="/static/img/need_edu3.png">
+                        </div>
+                    <div class="need_img_text">스킨십 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need4" class="need_img" src="/static/img/need_edu4.png">
+                        </div>
+                    <div class="need_img_text">장난감 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need5" class="need_img" src="/static/img/need_edu5.png">
+                        </div>
+                    <div class="need_img_text">혼자있기 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need6" class="need_img" src="/static/img/need_edu6.png">
+                        </div>
+                    <div class="need_img_text">산책 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need7" class="need_img" src="/static/img/need_edu7.png">
+                        </div>
+                    <div class="need_img_text">집착 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need8" class="need_img" src="/static/img/need_edu8.png">
+                        </div>
+                    <div class="need_img_text">기초 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need9" class="need_img" src="/static/img/need_edu9.png">
+                        </div>
+                    <div class="need_img_text">식사 훈련</div>
+                </div>
+                    <div class="need_edu_mission_select">
+                    <div class="need_img_center">
+                    <img data-direction="need10" class="need_img" src="/static/img/need_edu10.png">
+                        </div>
+                    <div class="need_img_text">잠자리 훈련</div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="need_eud_center_page">
+           <div id="need1" > <img class="need_page1" src="/static/img/need_page1.png"></div>
+            <div > <img  style="margin-top: 15px;" class="need_page1" src="/static/img/need_page1-2.png"></div>
+             <div> <img id="need2" class="need_page1" src="/static/img/need_page2.png"></div>
+             <div><img id="need3" class="need_page1" src="/static/img/need_page3.png"></div>
+            <div> <img id="need4" class="need_page1" src="/static/img/need_page4.png"></div>
+            <div> <img id="need5" class="need_page1" src="/static/img/need_page5.png"></div>
+            <div> <img id="need6" class="need_page1" src="/static/img/need_page6.png"></div>
+            <div> <img id="need7" class="need_page1" src="/static/img/need_page7.png"></div>
+            <div> <img id="need8" class="need_page1" src="/static/img/need_page8.png"></div>
+            <div> <img id="need9" class="need_page1" src="/static/img/need_page9.png"></div>
+           <div id="need10"> <img  class="need_page1" src="/static/img/need_page10.png"></div>
+        </div>
+              <div class="need_button">
+                    <div data-direction="need11" class="need_button_text">
+                        ↑ Top
+                    </div>
+              </div>
+    </div>
+</div>
+
+    <script>
+
+          const scrollMove = (event) => {
+          if (event.target.dataset.direction === 'need1')
+                window.scrollTo(0, 1070);
+            else if (event.target.dataset.direction === 'need2')
+                window.scrollTo(0, 2328);
+             else if (event.target.dataset.direction === 'need3')
+                window.scrollTo(0, 3943);
+               else if (event.target.dataset.direction === 'need4')
+                window.scrollTo(0, 4404);
+                 else if (event.target.dataset.direction === 'need5')
+                window.scrollTo(0, 5621);
+                   else if (event.target.dataset.direction === 'need6')
+                window.scrollTo(0, 8038);
+                     else if (event.target.dataset.direction === 'need7')
+                window.scrollTo(0, 9037);
+                       else if (event.target.dataset.direction === 'need8')
+                window.scrollTo(0, 10816);
+                           else if (event.target.dataset.direction === 'need9')
+                window.scrollTo(0, 12840);
+                               else if (event.target.dataset.direction === 'need10')
+                window.scrollTo(0, 13620);
+        }
+
+        document.querySelector('.need_edu_mission').addEventListener('click', scrollMove);
+
+            const scrollTop = (event) => {
+          if (event.target.dataset.direction === 'need11')
+                window.scrollTo(0, 320);}
+           document.querySelector('.need_button').addEventListener('click', scrollTop);
+
+
+    </script>
+
+{% endblock %}

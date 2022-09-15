@@ -1,0 +1,68 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+    <div class="inquiry_body">
+        <div class="inquiry_center">
+
+            <div class="community_bottom">
+                <a href="{% url "dog:community" %}" style="opacity: 0.6;" class="community_nav_edu">
+                    <h2 style="margin: 2px; font-size: 28px; color: white;">공지사항</h2>
+                </a>
+
+                <a href="{% url "dog:inquiry" %}" style="opacity: 1.0; " class="communitu_nav_life">
+                    <h2 style="margin: 2px; font-size: 28px; color: white;">고객센터</h2>
+                </a>
+            </div>
+
+            <div class="community_main_center">
+                <div class="community_main">
+{#                    <div class="community_search_main">#}
+{#                        <select class="community_select" name="search_bar">#}
+{#                            <option value="">제목</option>#}
+{#                            <option value="">내용</option>#}
+{#                            <option value="">제목+내용</option>#}
+{#                        </select>#}
+{#                        <input class="community_search_text" type="text" placeholder="검색어를 입력하세요">#}
+{#                        <button type="submit" class="community_button"><img class="community_search_bar" src="/static/img/community_search.png">검색#}
+{#                        </button>#}
+{#                    </div>#}
+                    <div class="community_list">
+                        <div class="community_top_text">
+                        </div>
+                        <div class="community_start_box">
+                            <div>번호</div>
+                            <div class="community_box_title">제목</div>
+                            <div>작성일</div>
+                            <div>조회수</div>
+                        </div>
+
+                        {% for community in communitys %}
+                             <a style="color: #000000; text-decoration: none;" href="/dog/community_click/{{ community.pk }}">
+                            <div class="community_list_box">
+                                <div class="community_list_test">{{ community.id }}</div>
+
+                                    <div class="community_title_box_title">{{ community.title }}</div>
+
+                                <div class="community_list_test">{{ community.create }}</div>
+                                <div class="community_list_test">{{ community.counting }}</div>
+                            </div>
+                             </a>
+                        {% endfor %}
+
+                    </div>
+                    <div class="community_bottom_button">
+                        <div class="community_button_order"><<</div>
+                        <div class="community_button_order"><</div>
+                        <div class="community_button_order3">1</div>
+                        <div style="margin-right: 3px;" class="community_button_order2">...</div>
+                        <div class="community_button_order">></div>
+                        <div class="community_button_order">>></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

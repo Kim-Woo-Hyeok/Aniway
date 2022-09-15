@@ -1,0 +1,59 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+
+    <div class="mission_body">
+        <div class="mission_center">
+
+            <div class="mission_nav_top">
+                <h1 style=" padding-top: 50px; padding-bottom: 30px; font-size: 65px">
+                    <img src="/static/img/mission_name.png"></h1>
+            </div>
+
+            <div class="mission_bottom">
+                <a href="{% url "dog:life_edu" %}" style="text-decoration-line: none; padding-top: 15px;"
+                  class="mission_nav_life" >
+                    생애 주기별 교육
+                </a>
+
+                <a href="{% url "dog:mission_edu" %}" style="text-decoration-line: none; padding-top: 15px;"
+                    class="mission_nav_edu">
+                    이상행동 교육
+                </a>
+            </div>
+
+            <div class="mission_select_title">
+                내 반려견 이상 행동 선택
+            </div>
+
+            <div class="edu_list_bar">
+
+                {% for mission in missions %}
+                    <div class="edu_list_tool">
+                        <img class="edu_list_img" src="{{ mission.profile_img }}">
+                        <div class="edu_list_title">
+                            {{ mission.title }}
+                        </div>
+                        <div style="margin: 0; font-weight: 500; color: #797272;" class="edu_list_title">
+                            {{ mission.en_title }}
+                        </div>
+                        <div class="edu_list_text">
+                            {{ mission.summary }}
+                        </div>
+                        <div class="edu_list_link">
+                            더 자세히<a href=""><img class="click2" src="/static/img/click2.png"></a>
+                        </div>
+                        <div class="edu_list_line">
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

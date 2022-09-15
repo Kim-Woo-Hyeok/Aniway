@@ -1,0 +1,199 @@
+{% extends 'dog/base.html' %}
+
+
+{% block content %}
+
+    <div class="body">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio_btn" id="radio1">
+                <input type="radio" name="radio_btn" id="radio2">
+                <input type="radio" name="radio_btn" id="radio3">
+                <input type="radio" name="radio_btn" id="radio4">
+
+                <div class="slide first">
+                    <img src="/static/img/main_img1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/img/main_img2.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/img/main_img3.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/img/main_img1.png" alt="">
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+
+                <!--automatic navigation end-->
+                <!--automatic navigation start-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!--manual navigation end-->
+
+            </div>
+            <!--image slider end-->
+        </div>
+
+    </div>
+
+
+    <div class="body">
+    <div class="dog_main">
+        <div class="dog_main_title">
+            <div style="margin-right: 30px;" class="dog_main_line"></div>
+             Our Function
+               <div style="margin-left: 30px;" class="dog_main_line"></div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="body">
+        <div class="dog_main">
+
+            <div class="dog_main_box">
+                <div class="dog_main_box_left">
+                    <div class="dog_main_box_number">
+                        반려견 생애주기별 미션
+                        <div class="dog_main_box_text">
+                            반려견은 주기마다 해야하는 교육이 있습니다.<br>
+                            Aniway에서는 반려견의 생애주기에 맞는 미션을<br>
+                            제공해줍니다.
+                        </div>
+                    </div>
+
+                    <a href="{% url 'dog:need_edu'%}" class="dog_main_box_left_bottom">
+                        <img class="dog_main_box_left_bottom_img" src="/static/img/click1.png">
+                    </a>
+
+                </div>
+                <div class="dog_main_box_right">
+                    <div class="aniway_introduce">
+                    <img class="guide_img1" src="/static/img/guide_img1.png">
+                    </div>
+                </div>
+            </div>
+
+                     <div class="dog_main_box">
+                             <div class="dog_main_box_right">
+                    <div class="aniway_introduce">
+                    <img class="guide_img1" src="/static/img/guide_img2.png">
+                    </div>
+                </div>
+                              <div class="dog_main_box_left">
+                    <div class="dog_main_box_number">
+                        맞춤형 이상행동 미션
+                        <div class="dog_main_box_text">
+                            가볍게 생각하고 넘어가서는 안되는 이상행동!<br>
+                           반려견이 이상행동을 보이진 않나요?<br>
+                            어떠한 원인과 해결방법이 있는지 함께 알아보아요
+                        </div>
+                    </div>
+
+                    <a href="{% url 'dog:misson_choice'%}" class="dog_main_box_left_bottom">
+                        <img class="dog_main_box_left_bottom_img" src="/static/img/click1.png">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+    <div class="dog_main_center_text">
+        <div style="margin-left: 20px;"  class="dog_main_bottom_font">
+            초보 반려인이신가요?
+        </div>
+        <div class="dog_main_bottom_font_text">
+            초보 반려인은 많은 부분에서 모르는 것도 실수하는 것도 많습니다. 하지만 Aniway와 함께라면 걱정하지 마세요.
+        </div>
+<div style="display: flex; justify-content: center;">
+        <div class="dog_main_direction">
+            <div style="padding-left: 0;" class="dog_main_direction_line">
+                <div class="dog_main_edu_text">
+                    반려견 첫 입양 시
+                </div>
+                <div class="dog_main_edu_title">
+                    필수 교육
+                </div>
+            </div>
+
+            <div class="dog_main_direction_line">
+                <div class="dog_main_edu_text">
+                    초보 반려인의
+                </div>
+                <div class="dog_main_edu_title">
+                    필수 용품
+                </div>
+            </div>
+
+
+            <div style="padding-right: 0; border: none;" class="dog_main_direction_line">
+                <div class="dog_main_edu_text">
+                    초보 반려인의
+                </div>
+                <div class="dog_main_edu_title">
+                    주의 행동
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <a href="{% url 'dog:need_edu' %}" class="dog_main_box_left_bottom">
+            <img style="width: 120px; margin: 20px 0 0 20px; text-align: center;" src="/static/img/click1.png">
+        </a>
+
+
+        <div style="margin-top: 50px;" class="body">
+            <div class="dog_main">
+
+                <div class="dog_main_box">
+                    <div class="dog_main_box_left">
+                        <div style="text-align: left;" class="dog_main_box_number">
+                            당신의 반려견은?
+                            <div style="text-align: left;" class="dog_main_box_text">
+                                반려견은 크기에 따라 소형견, 중형견, 대형견으로 나뉩니다.<br>
+                                반려견 크기에 따라서도 교육방법이 달라지는데요<br>
+                                우리 함께 이에 대한 특징과 맞춤 교육에 대해 알아보아요
+                            </div>
+                        </div>
+
+                        <a href="{% url 'dog:need_edu' %}" class="dog_main_box_left_bottom">
+                            <img style="margin: 25px 45px 0 0;" class="dog_main_box_left_bottom_img"
+                                 src="/static/img/click1.png">
+                        </a>
+
+                    </div>
+                    <div class="dog_main_box_right">
+                        <div class="aniway_introduce">
+                            <img style="max-width: 450px;" class="guide_img1" src="/static/img/guide_img3.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div style="margin-top: 50px;" class="dog_main_bottom_font">
+            반려인, 반려견의 행복을 위해 앞장서는 플랫폼
+        </div>
+        <div class="dog_main_bottom_font_text">
+          Aniway는 반려인의 성향에 맞춰 미션을 제공하고 반려견의 DB관리와 함께 생애주기를 관리해줍니다.<br>
+            여러분들의 반려생활이 행복하길 항상 응원합니다.
+        </div>
+
+        <div class="group_img1_center">
+    <img class="group_img1" src="/static/img/group_img1.png">
+        </div>
+    </div>
+    </div>
+
+
+    </body>
+
+{% endblock %}
+

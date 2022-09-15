@@ -1,0 +1,182 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+    <div class="inquiry_body">
+        <div class="inquiry_center">
+            <div class="community_bottom">
+                <a href="{% url "dog:community" %}" style="opacity: 0.6;" class="community_nav_edu">
+                    <h2 style="margin: 2px; font-size: 28px; color: white;">공지사항</h2>
+                </a>
+
+                <a href="{% url "dog:inquiry" %}" style="opacity: 1.0; " class="communitu_nav_life">
+                    <h2 style="margin: 2px; font-size: 28px; color: white;">고객센터</h2>
+                </a>
+            </div>
+
+
+            <div class="inquiry_sb">
+
+                <div class="inquiry_search">
+                    <div class="inquiry_search_title">자주 묻는 질문</div>
+                    <div class="inquiry_search_title_auto">
+                        <input class="inquiry_search_text" type="text" placeholder="궁금하신 내용을 입력해 주세요.">
+                        <button type="submit" class="inquiry_button">
+                            <img class="inquiry_button_img" src="/static/img/search_bar.png">
+                        </button>
+                    </div>
+
+                    <div id="list_box1" style="margin-top: 40px; border-top: 1px solid #000000;" class="inquiry_list_box">
+
+                        <div class="inquiry_title_box_title">택배사 파업지역인데 타 택배로 발송 가능한가요?</div>
+
+                        <svg id="svg1" style="display:flex; width: 30px; height: 40px;" aria-hidden="true" role="img">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M7.46964 9.46988C7.76252 9.17697 8.2374 9.17695 8.5303 9.46983L12.0002 12.9394L15.4701 9.46965C15.763 9.17676 16.2378 9.17677 16.5307 9.46967C16.8236 9.76257 16.8236 10.2374 16.5307 10.5303L12.884 14.1768C12.3959 14.6649 11.6045 14.6649 11.1163 14.1768L7.4697 10.5305C7.17679 10.2377 7.17677 9.76279 7.46964 9.46988Z"
+                                  fill="#646464"></path>
+                        </svg>
+                    </div>
+                      <div id="inquiry_detail1" class="inquiry_detail">
+                       </div>
+
+                    <div id="inquiry_list_box2" class="inquiry_list_box">
+                        <div id="detail_inquiry2" class="inquiry_title_box_title">택배사 파업지역인데 타 택배로 발송 가능한가요?</div>
+
+                        <svg style="width: 30px; height: 40px;" aria-hidden="true" role="img">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M7.46964 9.46988C7.76252 9.17697 8.2374 9.17695 8.5303 9.46983L12.0002 12.9394L15.4701 9.46965C15.763 9.17676 16.2378 9.17677 16.5307 9.46967C16.8236 9.76257 16.8236 10.2374 16.5307 10.5303L12.884 14.1768C12.3959 14.6649 11.6045 14.6649 11.1163 14.1768L7.4697 10.5305C7.17679 10.2377 7.17677 9.76279 7.46964 9.46988Z"
+                                  fill="#646464"></path>
+                        </svg>
+                    </div>
+                      <div id="inquiry_detail" class="inquiry_detail">
+                       </div>
+
+                    <div class="inquiry_list_box">
+
+                        <div id="detail_inquiry3" class="inquiry_title_box_title">택배사 파업지역인데 타 택배로 발송 가능한가요?</div>
+
+                        <svg style="width: 30px; height: 40px;" aria-hidden="true" role="img">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M7.46964 9.46988C7.76252 9.17697 8.2374 9.17695 8.5303 9.46983L12.0002 12.9394L15.4701 9.46965C15.763 9.17676 16.2378 9.17677 16.5307 9.46967C16.8236 9.76257 16.8236 10.2374 16.5307 10.5303L12.884 14.1768C12.3959 14.6649 11.6045 14.6649 11.1163 14.1768L7.4697 10.5305C7.17679 10.2377 7.17677 9.76279 7.46964 9.46988Z"
+                                  fill="#646464"></path>
+                        </svg>
+                    </div>
+                      <div id="inquiry_detail" class="inquiry_detail">
+                       </div>
+
+                    <div class="inquiry_list_box">
+
+                        <div id="detail_inquiry4" class="inquiry_title_box_title">택배사 파업지역인데 타 택배로 발송 가능한가요?</div>
+
+                        <svg style="width: 30px; height: 40px;" aria-hidden="true" role="img">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M7.46964 9.46988C7.76252 9.17697 8.2374 9.17695 8.5303 9.46983L12.0002 12.9394L15.4701 9.46965C15.763 9.17676 16.2378 9.17677 16.5307 9.46967C16.8236 9.76257 16.8236 10.2374 16.5307 10.5303L12.884 14.1768C12.3959 14.6649 11.6045 14.6649 11.1163 14.1768L7.4697 10.5305C7.17679 10.2377 7.17677 9.76279 7.46964 9.46988Z"
+                                  fill="#646464"></path>
+                        </svg>
+                    </div>
+                        <div id="inquiry_detail" class="inquiry_detail">
+                       </div>
+
+                    <div class="inquiry_list_box">
+
+                        <div id="detail_inquiry5" class="inquiry_title_box_title">택배사 파업지역인데 타 택배로 발송 가능한가요?</div>
+
+                        <svg style="width: 30px; height: 40px;" aria-hidden="true" role="img">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M7.46964 9.46988C7.76252 9.17697 8.2374 9.17695 8.5303 9.46983L12.0002 12.9394L15.4701 9.46965C15.763 9.17676 16.2378 9.17677 16.5307 9.46967C16.8236 9.76257 16.8236 10.2374 16.5307 10.5303L12.884 14.1768C12.3959 14.6649 11.6045 14.6649 11.1163 14.1768L7.4697 10.5305C7.17679 10.2377 7.17677 9.76279 7.46964 9.46988Z"
+                                  fill="#646464"></path>
+                        </svg>
+                    </div>
+                      <div id="inquiry_detail" class="inquiry_detail">
+                       </div>
+
+
+                </div>
+
+                <div class="service_column">
+                    <div class="service_auto">
+                         <div class="chatting_center">
+                        <div  id="add_feed" class="chatting_box">
+                           <img src="/static/img/chatting.png">
+                            <div class="chatting_on">1:1 문의</div>
+                        </div>
+                          <a href="{% url 'dog:community' %}" class="chatting_box">
+                            <img src="/static/img/notice.png">
+                            <div class="chatting_on">공지사항</div>
+                        </a>
+                            </div>
+                        <div class="service_flex_left">
+                        <div class="service_flex">
+                            <img class="call_class" src="/static/img/call1.png">
+                            <div class="service_center">
+                                고객센터
+                            </div>
+                        </div>
+                        <div class="service_number">
+                            010-8592-9623
+                        </div>
+                        <div class="service_name">
+                            Aniway 고객센터
+                        </div>
+                        <div class="service_time">
+                            업무시간: 09:00 ~ 18:00 ㅣ 점심시간:12:00 ~ 13:00<br>
+                            토요일, 일요일, 공휴일 휴무입니다.
+                        </div>
+                            </div>
+
+
+                    </div>
+
+               </div>
+            </div>
+        </div>
+    </div>
+
+     <div id="modal_add_feed" class="modal_overlay">
+        <div class="modal_window">
+            <div class="modal_text_align">
+                <div class="modal_text_bold" > 카카오톡 ID </div>
+                <div  class="modal_text_id"> imiss6236 </div>
+                    <div id="close_modal" class="modal_event">
+                        확인
+                    </div>
+                </div>
+        </div>
+    </div>
+`
+<script>
+      const modal = document.getElementById("modal_add_feed");
+    const buttonAddFeed = document.getElementById("add_feed");
+    buttonAddFeed.addEventListener("click", e => {
+        modal.style.display = "flex";
+        document.body.style.overflowY = "hidden"; // 스크롤 없애기
+    });
+
+    // 모달 닫기 코드
+    const buttonCloseModal = document.getElementById("close_modal");
+    buttonCloseModal.addEventListener("click", e => {
+        modal.style.display = "none";
+        document.body.style.overflowY = "visible";
+    });
+
+      //detail 표시하기
+      const list_box1 = document.getElementById('list_box1')
+    const detail1 = document.getElementById("inquiry_detail1")
+      const svg1 = document.getElementById("svg1")
+    list_box1.addEventListener("click", e => {
+        detail1.style.display = "flex";
+        svg1.style.transform = "rotate(180deg)";
+        svg1.style.margin = "0 5px 20px";
+    });
+
+     //detail 감추기
+    if( detail1.style.display === 'flex')
+    list_box1.addEventListener("click", e => {
+        detail1.style.display = "none";
+      svg1.style.transform = "rotate(180deg)";
+        svg1.style.margin = "0 5px 20px";
+    });
+
+</script>
+{% endblock %}
+

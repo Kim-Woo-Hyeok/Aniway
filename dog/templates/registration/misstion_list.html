@@ -1,0 +1,51 @@
+
+{% load sass_tags %}
+
+{% block content %}
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <title>AniWay</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+              rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap"
+              rel="stylesheet"/>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% sass_src 'css/dogmission.scss' %}" rel="stylesheet" type="text/css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Mission 목록</h1>
+        <p>
+            <a href=""><i class="bg-plus"></i>Add Mission</a>
+            <a href=" " class="btn btn-primary" style="float: right;"></a>
+        </p>
+        <ul class="list-group">
+            {% for mission in missions %}
+                <li class="list-group-item">
+                <a href="">{{ mission.title }}</a>
+                {% if mission.important %}
+                    <span class="badge badge-danger">!</span>
+                {% endif %}
+                <div style="float: right;">
+                    <a href="" class="btn btn-danger">완료</a>
+                    <a href="" class="btn btn-outline-primary">수정하기</a>
+                </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+{% endblock %}

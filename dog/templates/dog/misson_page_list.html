@@ -1,0 +1,51 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+    <div class="mission_body">
+        <div class="mission_center">
+
+            <div class="mission_nav_top">
+                <h1 style="position: relative; top: 0; z-index: 4; padding-top: 30px; padding-bottom: 30px; font-size: 65px">
+                    MISSION</h1>
+            </div>
+
+            <div class="mission_bottom">
+                <div style="position: relative; z-index: 4; padding-top: 15px;" class="mission_nav_edu">
+                    <h2 style="color: white;">이상행동 교육</h2>
+                </div>
+
+                <div style="position: relative; z-index: 4; padding-top: 15px;" class="mission_nav_life">
+                    <h2 style="color: white;">생애 주기별 교육</h2>
+                </div>
+            </div>
+
+            <div class="mission_qna_center">
+                <div class="mission_qna">
+                    <p style="font-size: 21px; font-weight: bold;" class="mission_font">미션시작 전 다음 질문에 답 해주세요! </p>
+
+                    <p style="margin-top: 25px;" class="mission_font">1. 반려견에게 월 평균 지출 비용은? </p>
+                    <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp; 7만원 이하 </p>
+                    <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;7 ~ 12만원 </p>
+                  <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;12만원 이상 </p>
+                     <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;잘 모르겠음 </p>
+
+                    <p style="margin-top: 25px;" class="mission_font">2. 사용자의 성격 유형(MBTI)는? </p>
+                   <input name="" type="" style="margin-top: 10px;" class="form-control"
+                                   id=""
+                                   placeholder="ex) INFP, ESTJ," value="{{ forms.password }}">
+                      <p style="margin-top: 15px;" class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;잘 모르겠음 </p>
+
+                    <p style="margin-top: 35px;" class="mission_font">사용자가 생각하는 반려견과의 애정도(%)는? </p>
+                     <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;0 ~ 30% </p>
+                    <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;31 ~ 60% </p>
+                    <p class="mission_radio_text"><input class="mission_radio" type="radio">&nbsp;&nbsp;61 ~ 100% </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

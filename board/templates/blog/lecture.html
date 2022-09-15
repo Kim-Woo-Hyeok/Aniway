@@ -1,0 +1,66 @@
+
+
+{% load static %}
+<html>
+<head>
+      <title>Title</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/insta.scss' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="body">
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio_btn" id="radio1">
+            <input type="radio" name="radio_btn" id="radio2">
+            <input type="radio" name="radio_btn" id="radio3">
+            <input type="radio" name="radio_btn" id="radio4">
+
+            <div class="slide first">
+                <img src="/static/img/img_change1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/static/img/img_change2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/static/img/img_change3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/static/img/img_change4.jpg" alt="">
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+
+            <!--automatic navigation end-->
+            <!--automatic navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
+
+        </div>
+        <!--image slider end-->
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>

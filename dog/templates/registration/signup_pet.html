@@ -1,0 +1,88 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+
+    <div style="background-color: #F9E8E8;  padding: 0 5px; width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+
+        <div class="dog_login_box">
+            <div style="margin-bottom:50px; width: 700px; display: flex; justify-content: center; align-items: center;">
+                <img style=" width: 200px; " src="/static/img/login_logo2.png">
+                <div class="dog_login_box_text">
+                    회원가입 (반려견)
+                </div>
+            </div>
+             <div class="dog_login_input">
+                 <label style="margin-bottom: 8px;">반려견 이름</label>
+                            <input  name="" type="" class="form-control" id=""
+                                   placeholder="사용하실 아이디를 입력해주세요" value=""><br>
+
+                     <label style="">성별</label>
+                   <div style="display: flex;" class="dog_login_agree">
+
+            <input type="radio" class="dog_login_agree_checkbox">
+                <div  class="dog_login_agree_font">
+                     남
+                </div>
+                          <input style="margin-left: 15px;" type="radio" class="dog_login_agree_checkbox">
+                <div  class="dog_login_agree_font">
+                     여
+                </div>
+
+            </div>
+
+                  <label style="margin-top: 20px;">생년월일</label>
+                 <div style="display: flex; justify-content: space-between;">
+                            <input name="" type="" style="margin-top: 10px;" class="dog_signup_date" id="" placeholder="년(4자)" value="{{ forms.password }}">
+                  <select name="" type="" style="margin-top: 10px;" class="dog_signup_date2" id="">
+                      <option value="">월</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                           <option value="">12</option>
+                  </select>
+                  <input name="" type="" style="margin-top: 10px;" class="dog_signup_date" id="" placeholder="일" value="{{ forms.password }}">
+                     </div>
+                <label style="margin-top: 35px;">반려견 견종</label>
+                  <input name="" type="" style="margin-top: 10px;" class="form-control"
+                                   id=""
+                                   placeholder="반려견 견종을 입력해주세요" value="">
+                <label style="margin-top: 35px;">반려견 몸무게</label>
+                    <input name="" type="" style="margin-top: 10px;" class="form-control"
+                                   id=""
+                                   placeholder="반려견 몸무게를 입력해 주세요" value="">
+                  <label style="margin-top: 35px;">중성화 수술 여부</label>
+                   <div style="display: flex;" class="dog_login_agree">
+
+            <input type="radio" class="dog_login_agree_checkbox">
+                <div  class="dog_login_agree_font">
+                     여
+                </div>
+                          <input style="margin-left: 15px;" type="radio" class="dog_login_agree_checkbox">
+                <div  class="dog_login_agree_font">
+                     부
+                </div>
+
+            </div>
+
+
+                 <label class="dog_signup_submit"><a href="{% url "dog:finish" %}" style="text-decoration-line: none;">회원가입</a></label>
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+{% endblock %}

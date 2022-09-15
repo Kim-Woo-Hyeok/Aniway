@@ -1,0 +1,91 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+    <div class="life_body">
+        <div class="life_center">
+
+            <div class="life_nav_top">
+                <h1 style=" padding-top: 50px; padding-bottom: 30px; font-size: 65px">
+                    <img src="/static/img/mission_name.png"></h1>
+            </div>
+
+            <div class="life_bottom">
+                <a href="{% url "dog:life_edu" %}" style="text-decoration-line: none; padding-top: 15px;"
+                   class="life_nav_edu">
+                    생애 주기별 교육
+                </a>
+
+                <a href="{% url "dog:mission_edu" %}" style="text-decoration-line: none; padding-top: 15px;"
+                   class="life_nav_life">
+                    이상행동 교육
+                </a>
+            </div>
+
+
+                <div class="life_cycle">
+                    <div class="life_cycle_position">
+                    <div class="life_cycle_bt_on" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                        <div class="life_cycle_bt" type="radio">
+                    </div>
+                    </div>
+                </div>
+        <div class="life_cycle_text">
+            <p class="life_active">0개월</p>
+            <p class="life_text_off">1개월</p>
+            <p class="life_text_off">2개월</p>
+            <p class="life_text_off">3개월</p>
+            <p class="life_text_off">4개월</p>
+            <p class="life_text_off">5개월</p>
+            <p class="life_text_off">6개월</p>
+            <p class="life_text_off">7개월~</p>
+        </div>
+
+              <div class="life_select_title">
+               미션 카테고리 선택
+            </div>
+
+            <div class="life_list_bar">
+
+                {% for life in lifes %}
+                    <div class="life_list_tool">
+                        <img class="life_list_img" src="{{ life.img.url }}">
+                        <div class="life_list_title">
+                            {{ life.title }}
+                        </div>
+                        <div style="margin: 0; font-weight: 500; color: #797272;" class="life_list_title">
+                            {{ life.en_title }}
+                        </div>
+                        <div class="life_list_text">
+                            {{ life.summary }}
+                        </div>
+                        <div class="life_list_link">
+                            더 자세히<a href=""><img class="life_click2" src="/static/img/click2.png"></a>
+                        </div>
+                        <div class="life_list_line">
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+<p class="life_bottom_title">0개월 반려견의 용품 패키지를 알아볼까요?</p>
+        </div>
+
+        </div>
+    </div>
+
+{% endblock %}

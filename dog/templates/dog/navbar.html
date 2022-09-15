@@ -1,0 +1,61 @@
+
+
+    <nav style=" height:19px;  background-color: #534848; display: flex; justify-content: center; align-items: center;"
+             class="nav_card_bar">
+            <ul style="width:100%; max-width: 1440px; display: flex; justify-content: right; align-content: center; background-color: #534848; color: #FFFFFF;"
+                class="nav justify-content-end">
+            </ul>
+        </nav>
+
+        <nav style="border-bottom: 1px solid #534848;  background-color: #ffffff; display: flex; justify-content: center; align-items: center;"
+             class="nav_card_bar">
+            <ul style="width:1440px; display: flex; align-content: center;  margin-top: 10px; background-color: #ffffff; color: #FFFFFF;" class="nav">
+
+                <div class="dog_nav_flex">
+                   <a href="{% url "dog:dog_main" %}"><img class="dog_nav_logo" src="/static/img/Logo_normal.png"></a>
+                    <a href="{% url "dog:dog_main" %}" style="text-decoration-line: none; font-size: 20px;" class="dog_nav_text">
+                        Home
+                    </a>
+                    <a href="{% url "dog:company" %}" style="text-decoration-line: none;" class="dog_nav_text">
+                        회사소개
+                    </a>
+                    <a style="text-decoration-line: none;" class="dog_nav_text" href="{% url "dog:misson_choice" %}">
+                        미션
+                    </a>
+                      <a style="text-decoration-line: none;" class="dog_nav_text dropdown-toggle" href="{% url "dog:community" %}" data-bs-toggle="dropdown">
+                        커뮤니티
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url "dog:community" %}">공지사항</a></li>
+                         <li><hr class="dropdown-divider"></li>
+                           <li><a class="dropdown-item" href="{% url "dog:inquiry" %}">고객센터</a></li>
+                    </ul>
+                     <a style="margin-left: 580px; text-decoration-line: none;" class="dog_nav_text" href="{% url "dog:misson_choice" %}">
+                        MY PAGE
+                    </a>
+                    <div style="margin-left: 32px; margin-top: 70px; height: 15px;  border-right: 1.5px solid #000000;">
+
+                    </div>
+                     <a style="text-decoration-line: none;" class="dog_nav_text" href="{% url "dog:misson_choice" %}">
+                        MY DOG
+                    </a>
+                </div>
+
+           <div class="nav_var_display">
+                    {% if user.is_active %}
+                         <li style="display: flex;" class="nav-item">
+                            <a style="display: flex; justify-content: space-between; color: #ffffff" class="nav-link"
+                               href="{% url 'dog:logout' %}"><p style="padding: 9px 0; border-radius: 10px;  background-color: #000000; display: flex; justify-content: center; align-items: center; width: 85px; font-weight: bold; margin-left: 20px; margin-top: 40px; font-size: 15px; ">Log Out</p></a>
+
+                        </li>
+                    {% else %}
+                        <li style="display: flex;" class="nav-item">
+                            <a style="display: flex; justify-content: space-between; color: #000000" class="nav-link"
+                               href="{% url 'dog:login' %}"><p style="padding: 9px 0; border-radius: 10px;  background-color: #FFCB25; display: flex; justify-content: center; align-items: center; width: 85px; font-weight: bold; margin-left: 20px; margin-top: 40px; font-size: 15px; ">로그인</p></a>
+
+                        </li>
+                    {% endif %}
+                </div>
+            </ul>
+        </nav>
+

@@ -1,0 +1,401 @@
+
+
+{% load static %}
+<html>
+<head>
+    <title> business_card </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/insta.scss' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+<form action="{% url 'card:business' %}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+
+
+
+<nav style=" background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);" class="nav_card_bar">
+
+     <ul class="nav justify-content-end">
+     <div class="nav_var_display">
+        {% if user.is_active %}
+        <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="{% url 'card:login' %}">{{user.email}}</a>
+        </li>
+        <li class="nav-item">
+          <a style="color: white;" class="nav-link" href="{% url 'card:logout' %}">logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'card:login' %}"> Login</a>
+        </li>
+        {% endif %}
+     </div>
+      </ul>
+  <input type="submit" value="명함 제작완료">
+    <div class="nav_card_left">
+        저장하기
+        <button onclick="PrintDiv()" style="background-color: #81BEF7; border: none;" type="button"><img style="width: 35px;" src="/static/img/card_down.png"></button>
+    </div>
+
+</nav>
+
+<div class="card_flex">
+    <div class="card_main_left">
+        <div class="card_left_box">
+            <div class="card_color">
+                <label for="colorWell">Background Color:</label>
+                <input type="color" value="#ff0000" id="colorWell">
+            </div>
+{#            <div class="card_color_cho">#}
+{#                <input id="card_color1" type="button" onclick=""> <input id="card_color2" type="button"> <input name="card-btn" id="card_color3" type="button"> <input name="card-btn" id="card_color4" type="button">#}
+{#                <input name="card-btn" id="card_color5" type="button"> <input name="card-btn" id="card_color6" type="button">#}
+{#            </div>#}
+        </div>
+
+        <div class="card_left_box">
+            <div class="card_color">
+                 <label for="card_text_color">Text Color:</label>
+                <input type="color" value="#ff0000" id="card_text_color" onchange="onChangeColor(event.target.value)">
+            </div>
+{#            <div class="card_color_cho1">#}
+{#            <input class="card_color1" id="card_text1" onclick="" type="button">   <input class="card_color2" onclick="" id="card_text2" type="button">   <input class="card_color3" onclick="" id="card_text3" type="button">   <input class="card_color4" onclick="" id="card_text4" type="button">   <input class="card_color5" onclick="" id="card_text5" type="button">   <input class="card_color6" onclick="" id="card_text6" type="button">  <input class="card_color7" onclick="" id="card_text7" type="button">#}
+{#            </div>#}
+        </div>
+               <div class="card_left_box">
+            <div class="card_color">
+                Insert Img:
+{#                 <div class="card_color_cho">#}
+                <label class="modal_image_css" for="input-image">
+                    Click
+                     <input accept="profile_img/*" name="profile_img" style="display: none; cursor: grab;" type="file" id="input-image">
+                </label>
+{#            </div>#}
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card_main">
+        <div class="card_flex_center">
+            <div class="card_bar">
+                Make: Business Card
+            </div>
+
+            <div id="card_print" class="card_make">
+                <span class="card_make_left" id="card_make_left">
+                     <img src="/static/img/profile_img.png" id="preview-image" class="card_img_box">
+                    <span class="card_rotate" id="card_rotate">
+                    </span>
+                    <textarea name="business_name" id="card_textarea1" class="card_business_name1" placeholder="회사명을 작성해 주세요" onclick="onClickInput(this, event)" style="color: #000000;"></textarea>
+                </span>
+                <div class="card_make_center">
+                   <textarea name="name" id="card_textarea2" class="card_business_name3" placeholder="이름" onclick="onClickInput(this, event)" style="color: #000000;"></textarea>
+                   <textarea name="content1" id="card_textarea3" class="card_business_name3" placeholder="담당업무" onclick="onClickInput(this, event)" style="color: #000000;"></textarea>
+                   <textarea name="content2" id="card_textarea4" class="card_business_name2" placeholder="회사 주소, 연락처, 홈페이지 주소 등을 입력해 주세요" onclick="onClickInput(this, event)" style="color: #000000;"></textarea>
+                </div>
+                <span id="card_make_right" class="card_make_right">
+
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+<script>
+    //Color picker script start
+    var colorWell;
+    var defaultColor = "#424242";
+    var curInputElem = null;
+
+    window.addEventListener("load", startup2, false);
+
+    const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
+
+    function onClickInput(elem, event) {
+        console.log(elem.style.color)
+        const hex = rgb2hex(elem.style.color)
+        console.log(hex)
+        document.getElementById('card_text_color').value = hex
+
+        curInputElem = elem
+    }
+
+    function onChangeColor(value) {
+        console.log(`onChangeColor => ${value}`)
+
+        if (curInputElem) {
+            curInputElem.style.color = value
+        } else {
+            alert('선택된 뭔가 없음')
+        }
+    }
+
+    function hexToRgb(hex) {
+      var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+      } : null;
+    }
+
+    function startup2() {
+        colorWell = document.querySelector("#colorWell");
+        colorWell.value = defaultColor;
+        colorWell.addEventListener("input", updateFirst, false);
+        colorWell.addEventListener("change", updateAll, false);
+        colorWell.select();
+    }
+
+    function updateFirst(event) {
+        var p = document.querySelector("span");
+
+        if (p) {
+            p.style.backgroundColor = event.target.value;
+        }
+    }
+
+    function updateAll(event) {
+        document.querySelectorAll("span").forEach(function (p) {
+            p.style.backgroundColor = event.target.value;
+        });
+    }
+ //Color picker script end
+
+    //Textcolor 변경
+    var card_text_color;
+    var defaultColor2 = "#424242";
+      window.addEventListener("load", startup, false);
+
+    function startup() {
+        card_text_color = document.querySelector("#card_text_color");
+        card_text_color.value = defaultColor2;
+        // card_text_color.addEventListener("input", updateFirst2, false);
+        // card_text_color.addEventListener("change", updateAll2, false);
+        card_text_color.select();
+    }
+
+    function updateFirst2(event) {
+        var p = document.querySelector("textarea");
+
+        if (p) {
+            p.style.color = event.target.value;
+        }
+    }
+
+    function updateAll2(event) {
+        document.querySelectorAll("textarea").forEach(function (p) {
+            p.style.color = event.target.value;
+        });
+    }
+
+
+
+    {#let currentInputElem = null#}
+    {##}
+    {#function change#}
+
+    //이미지 삽입 기능 시작
+    function readImage(input) {
+        // 인풋 태그에 파일이 있는 경우
+        if (input.files && input.files[0]) {
+            // 이미지 파일인지 검사 (생략)
+            // FileReader 인스턴스 생성
+            const reader = new FileReader()
+            // 이미지가 로드가 된 경우
+            reader.onload = e => {
+                const previewImage = document.getElementById("preview-image")
+                previewImage.src = e.target.result
+            }
+            // reader가 이미지 읽도록 하기
+           console.log(reader.readAsDataURL(input.files[0]));
+        }
+    }
+
+    // input file에 change 이벤트 부여
+    const inputImage = document.getElementById("input-image")
+    const imgview = document.getElementById("preview-image")
+    inputImage.addEventListener("change", e => {
+        imgview.style.display = "flex"
+        readImage(e.target)
+    })
+    //이미지 삽입 기능 끝
+
+  // 컬러코드에 backgroundColor click 이벤트 부여 시작
+    const card_color1 = document.getElementById("card_color1")
+    const card_color2 = document.getElementById("card_color2")
+    const card_color3 = document.getElementById("card_color3")
+    const card_color4 = document.getElementById("card_color4")
+    const card_color5 = document.getElementById("card_color5")
+    const card_color6 = document.getElementById("card_color6")
+    const card_rotate = document.getElementById("card_rotate")
+    const card_make_left = document.getElementById("card_make_left")
+    const card_make_right = document.getElementById("card_make_right")
+
+        card_color1.addEventListener("click", e => {
+        card_make_left.style.backgroundColor = "black";
+        card_make_right.style.backgroundColor = "black";
+         card_rotate.style.backgroundColor = "black";
+    });
+
+        card_color2.addEventListener("click", e => {
+        card_make_left.style.backgroundColor = "#FFFF00";
+        card_make_right.style.backgroundColor = "#FFFF00";
+            card_rotate.style.backgroundColor = "#FFFF00";
+    });
+
+        card_color3.addEventListener("click", e => {
+        card_make_left.style.backgroundColor = "#80FF00";
+        card_make_right.style.backgroundColor = "#80FF00";
+          card_rotate.style.backgroundColor = "#80FF00";
+    });
+
+        card_color4.addEventListener("click", e => {
+        card_make_left.style.backgroundColor = "#FE9A2E";
+        card_make_right.style.backgroundColor = "#FE9A2E";
+           card_rotate.style.backgroundColor = "#FE9A2E";
+    });
+
+        card_color5.addEventListener("click", e => {
+        card_make_left.style.backgroundColor = "#0040FF";
+        card_make_right.style.backgroundColor = "#0040FF";
+        card_rotate.style.backgroundColor = "#0040FF";
+    });
+
+        card_color6.addEventListener("click", e => {
+        card_make_left.style.backgroundColor = "#FF0000";
+        card_make_right.style.backgroundColor = "#FF0000";
+            card_rotate.style.backgroundColor = "#FF0000";
+    });
+  // 컬러코드에 backgroundColor click 이벤트 부여 끝
+
+    // 컬러코드에 color 이벤트 부여 시작
+    const textcolor1 = document.getElementById("card_text1")
+    const textcolor2 = document.getElementById("card_text2")
+    const textcolor3 = document.getElementById("card_text3")
+    const textcolor4 = document.getElementById("card_text4")
+    const textcolor5 = document.getElementById("card_text5")
+    const textcolor6 = document.getElementById("card_text6")
+    const textcolor7 = document.getElementById("card_text7")
+    const card_text1 = document.getElementById("card_textarea1")
+    const card_text2 = document.getElementById("card_textarea2")
+    const card_text3 = document.getElementById("card_textarea3")
+    const card_text4 = document.getElementById("card_textarea4")
+
+    textcolor1.addEventListener("click", e => {
+        card_text1.style.color = "#000000";
+        card_text2.style.color = "#000000";
+        card_text3.style.color = "#000000";
+        card_text4.style.color = "#000000";
+    });
+
+    textcolor2.addEventListener("click", e => {
+        card_text1.style.color = "#FFFF00";
+        card_text2.style.color = "#FFFF00";
+        card_text3.style.color = "#FFFF00";
+        card_text4.style.color = "#FFFF00";
+    });
+
+    textcolor3.addEventListener("click", e => {
+        card_text1.style.color = "#80FF00";
+        card_text2.style.color = "#80FF00";
+        card_text3.style.color = "#80FF00";
+        card_text4.style.color = "#80FF00";
+    });
+
+    textcolor4.addEventListener("click", e => {
+        card_text1.style.color = "#FE9A2E";
+        card_text2.style.color = "#FE9A2E";
+        card_text3.style.color = "#FE9A2E";
+        card_text4.style.color = "#FE9A2E";
+    });
+
+    textcolor5.addEventListener("click", e => {
+        card_text1.style.color = "#0040FF";
+        card_text2.style.color = "#0040FF";
+        card_text3.style.color = "#0040FF";
+        card_text4.style.color = "#0040FF";
+    });
+
+    textcolor6.addEventListener("click", e => {
+        card_text1.style.color = "#FF0000";
+        card_text2.style.color = "#FF0000";
+        card_text3.style.color = "#FF0000";
+        card_text4.style.color = "#FF0000";
+    });
+
+       textcolor7.addEventListener("click", e => {
+        card_text1.style.color = "#ffffff";
+    });
+     // 컬러코드에 color 이벤트 부여 끝
+
+
+
+ //뒤로가기 기능 구현 시작
+    const histories = []
+
+    function addHistory(eventTargetElem, eventType, eventValue) {
+        histories.push({
+            target: eventTargetElem,
+            type: eventType,
+            value: eventValue,
+        })
+    }
+
+    function undoEvent() {
+        if (histories.length > 0) {
+            const lastHistory = histories[histories.length - 1]
+
+            if (lastHistory.type === 'style') {
+                lastHistory.target.style = lastHistory.value
+            }
+
+            histories.splice(-1, 1)
+        } else {
+            alert('아직 없습니다.')
+        }
+    }
+ //뒤로가기 기능 구현 끝
+
+    //download 기능 시작
+    function PrintDiv() {
+        const div = document.getElementById("card_print")
+        html2canvas(div).then(function (canvas) {
+            const imgUri = canvas.toDataURL();
+            downloadURI(imgUri, "cardmake.png");
+        });
+    }
+
+    function downloadURI(uri, name) {
+        const link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+    }
+    //download 기능 끝
+
+
+</script>
