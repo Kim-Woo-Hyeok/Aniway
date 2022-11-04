@@ -1,0 +1,132 @@
+
+.account_body {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60px;
+
+  .account_main {
+    margin-right: 60px;
+    width: 1100px;
+    height: 570px;
+    display: flex;
+    background-color: black;
+
+    .account_left {
+
+      display: flex;
+      justify-content: center;
+      width: 445px;
+      height: 100%;
+      background-color: black;
+
+      .account_left_title {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: 55px;
+
+        .account_left_top_box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 65px 100px;
+          width: 50px;
+          height: 50px;
+          color: white;
+          font-size: 35px;
+          font-weight: bold;
+
+          .account_left_img {
+            width: 105px;
+            height: 105px;
+          }
+        }
+      }
+
+
+    }
+
+    .account_left_order {
+      width: 168px;
+      height: 213px;
+      margin-top: 135px;
+
+      .account_order_box {
+        display: flex;
+        width: 168px;
+        height: 23px;
+        font-size: 18px;
+        color: white;
+        margin-bottom: 27px;
+
+        .account_icon {
+          background-color: #D9D9D9;
+          width: 20px;
+          height: 20px;
+          border-radius: 20px;
+          margin-right: 15px;
+        }
+
+        .account_icon_click {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          margin-right: 15px;
+          margin-left: -5px;
+
+          .account_icon_click2 {
+            background-color: black;
+            width: 17px;
+            height: 17px;
+            border-radius: 20px;
+          }
+        }
+      }
+      .left_dog {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        z-index: 3;
+        bottom: -30px;
+      }
+    }
+  }
+  .account_right {
+
+    width: 655px;
+    height: 100%;
+    background-color: #F9E3E3;
+    .account_right_title {
+      margin: 58px 0 0 91px;
+      width: 450px;
+      height: 85px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .account_right_input {
+        margin-left: 96px;
+      width: 476px;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      .account_right_box {
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+input {
+  border: none;
+}

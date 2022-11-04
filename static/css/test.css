@@ -1,0 +1,15 @@
+div { margin: 0; padding: 0; }
+
+ul > li { list-style-type: none; }
+
+@media screen and (max-width: 811px) { .left { display: none; } .right { float: left; } }
+
+.left { width: 30%; float: left; }
+
+.right { width: 70%; }
+
+.content { padding: 16px; }
+
+li { padding: 24px 0; border-bottom: 1px solid #c7c7c7; }
+
+/*# sourceMappingURL=test.css.map */
