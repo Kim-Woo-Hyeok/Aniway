@@ -12031,126 +12031,198 @@ video.bg-video {
   }
 }
 
-
-.dog_login_box {
-  margin-top: 20px;
-  padding-bottom: 60px;
-  flex-direction: column;
+.dog_login_body {
+  width: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 700px;
-  background-color: #ffffff;
-
-  &.main_wrapper {
-    width: 100%;
-  }
-
-  .dog_login_box_text {
-    padding-top: 25px;
-    margin-left: -10px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .dog_login_input {
+  .dog_login_tool {
+    flex-direction: column;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-
-    .dog_signup_submit {
-      width: 100%;
-      padding: 20px 110px;
-      max-width: 400px;
-      background-color: #FFCB25;
-      font-size: 20px;
-      font-weight: bold;
+    align-items: center;
+    width: 700px;
+    .dog_login_tool_detail {
+      margin-bottom: -15px;
+      width: 350px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 40px;
-    }
-
-    .dog_signup_check {
-      width: 20px;
-      height: 20px;
-
-    }
-
-    .dog_signup_date {
-      width: 100px;
-      height: 45px;
-      display: block;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #000000;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      border-radius: 0.25rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
-
-    .dog_signup_date2 {
-      width: 100px;
-      height: 45px;
-      display: block;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #000000;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-
-      border-radius: 0.25rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      .dog_login_tool_img {
+        position: relative;
+        height: 150px;
+        margin-left: -130px;
+      }
+      .dog_login_tool_text {
+          padding-top: 25px;
+          margin-left: -10px;
+          font-size: 20px;
+          font-weight: bold;
+      }
     }
   }
-
-  .dog_login_agree {
-    width: 350px;
-    height: 54px;
+  .dog_login_input_info {
     display: flex;
-    align-items: center;
-
-    .dog_login_agree_checkbox {
-      width: 20px;
-      height: 20px;
+    flex-direction: column;
+  }
+  .dog_login_agree_info {
+     width: 350px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+    .dog_login_agree_checkbox_info {
+       width: 20px;
+        height: 20px;
     }
-
-    .dog_login_agree_font {
-      font-size: 15px;
-      margin-left: 10px;
-      color: black;
+    .dog_login_agree_font_info {
+       font-size: 15px;
+        margin-left: 10px;
+        color: black;
     }
   }
-
   .dog_login_button {
-    border-radius: 5px;
-    border: none;
-    margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 372px;
+      height: 67px;
+      background-color: #FFCB25;
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+    }
+   .dog_login_account {
+      padding-top: 7px;
+      display: flex;
+    }
+}
+
+
+.dog_signup_body {
+  background-color: #D8DAD7;
+  padding: 0 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .dog_login_box {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 372px;
-    height: 67px;
-    background-color: #FFCB25;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-  }
+    width: 700px;
+    background-color: #ffffff;
+    .dog_login_box_center {
+      margin-top: 20px;
+      margin-bottom:30px;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  .dog_login_account {
-    padding-top: 7px;
-    display: flex;
-  }
+    &.main_wrapper {
+      width: 100%;
+    }
+
+    .dog_login_box_text {
+      padding-top: 25px;
+      margin-left: -10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+       }
+    }
+
+    .dog_login_input {
+      display: flex;
+      flex-direction: column;
+
+      .dog_signup_submit {
+        width: 100%;
+        padding: 20px 110px;
+        max-width: 400px;
+        background-color: #FFCB25;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+      }
+
+      .dog_signup_check {
+        width: 20px;
+        height: 20px;
+
+      }
+
+      .dog_signup_date {
+        width: 100px;
+        height: 45px;
+        display: block;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000000;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .dog_signup_date2 {
+        width: 100px;
+        height: 45px;
+        display: block;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000000;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    }
+
+    .dog_login_agree {
+      width: 350px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+
+      .dog_login_agree_checkbox {
+        width: 20px;
+        height: 20px;
+      }
+
+      .dog_login_agree_font {
+        font-size: 15px;
+        margin-left: 10px;
+        color: black;
+      }
+    }
+
+
+
+
+
 }
 
 .dog_nav_bottom {
@@ -12565,7 +12637,7 @@ video.bg-video {
 
 
 .mission_body {
-   display: flex;
+  display: flex;
   justify-content: center;
   width: 100vw;
   background-color: #ffffff;
@@ -13829,17 +13901,26 @@ video.bg-video {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100%;
-  min-height: 1300px;
-  max-height: 4000px;
+  margin-bottom: 50px;
 
   .life_center {
     width: 100%;
+    height: 100%;
     max-width: 1200px;
     background-color: #ffffff;
+
     .life_bottom_title {
       font-weight: bold;
     }
+
+    .life_bottom_img {
+      width: 250px;
+    }
+    .life_bottom_img:hover {
+      border: 3px solid #0D99FF;
+    }
+
+
     .life_nav_top {
       width: 100%;
       display: flex;
@@ -13871,71 +13952,110 @@ video.bg-video {
 
       }
     }
-    .life_cycle {
-      position: relative;
-      margin-top: 90px;
-      margin-bottom: 35px;
-      width: 100%;
-      min-width: 1400px;
-      border-bottom: 3px solid #A3A3A3;
-      margin-left: -105px;
-      .life_cycle_position {
-         padding: 0 60px;
-         position: absolute;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-         .life_cycle_bt {
-           margin-top: -20px;
-           z-index: 3;
-           border-radius: 40px;
-           width: 40px;
-           height: 40px;
-           border: 4px solid #A3A3A3;
-           background-color: #ffffff;
-        }
-        .life_cycle_bt_on {
-           margin-top: -20px;
-           z-index: 3;
-           border-radius: 40px;
-           width: 40px;
-           height: 40px;
-           border: 6px solid #FFCB25;
-           background-color: #ffffff;
-        }
-        }
-    }
-    .life_cycle_text {
-      display: flex;
-      justify-content: space-between;
-      .life_active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        border-radius: 20px;
-        width: 80px;
-        height: 37px;
-        background-color: #FFCB25;
-      }
-      .life_text_off {
-         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #A3A3A3;
-        width: 80px;
-        height: 37px;
-      }
-    }
+
     .life_select_title {
-        margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
       padding-bottom: 10px;
       width: 100%;
       max-width: 1200px;
       font-size: 25px;
       font-weight: bolder;
       border-bottom: 3px solid #000000;
+
+      .life_select_between {
+        display: flex;
+
+        .life_title_img {
+          margin-top: 30px;
+          width: 100%;
+          max-width: 500px;
+        }
+
+        .life_title_img2 {
+          margin-top: 30px;
+          width: 100%;
+          max-width: 50px;
+          height: 40px;
+        }
+      }
     }
+
+    .life_supplies {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .life_mission {
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      margin: 30px;
+
+      .life_page {
+        border-radius: 30px;
+        padding: 20px 30px;
+        width: 85%;
+
+        .life_mi_title {
+          display: flex;
+          justify-content: left;
+          width: 100%;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .life_mi_text {
+          width: 100%;
+          display: flex;
+          justify-content: left;
+          font-size: 18px;
+          font-weight: 500;
+          padding-top: 10px;
+          padding-left: 25px;
+          padding-bottom: 15px;
+
+          .life_pre {
+            display: flex;
+            justify-content: left;
+            font-weight: 700;
+            font-size: 17px;
+            text-align: left;
+            white-space: pre-line;
+            word_wrap: break-word;
+            word-break: break-all;
+
+          }
+        }
+
+        .life_icon {
+          width: 35px;
+          height: 35px;
+          margin-right: 15px;
+        }
+      }
+    }
+    .life_button_page {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      .life_button {
+        color: #000000;
+        text-decoration-line: none;
+        width: 150px;
+        height: 50px;
+        font-size: 21px;
+        padding-top: 12px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #FFCB25;
+      }
+    }
+
+
     .life_list_bar {
       display: flex;
       justify-content: flex-start;
@@ -14001,3 +14121,553 @@ video.bg-video {
     }
   }
 }
+
+.pack_body {
+  width: 100vw;
+  text-align: center;
+
+    .pack_title_size {
+      margin-top: 60px;
+      margin-bottom: 100px;
+      width: 100%;
+      text-align: center;
+
+      .pack_title_img {
+        width: 100%;
+        max-width: 230px;
+      }
+    }
+    .pack_list {
+      width: 100%;
+      text-align: center;
+      .pack_img {
+        margin-bottom: 150px;
+        width: 100%;
+        max-width: 1240px;
+      }
+      .pack_img:hover {
+        border: 3px solid #0D99FF;
+      }
+
+    }
+  }
+
+
+//component
+ .life_cycle {
+      position: relative;
+      margin-top: 90px;
+      margin-bottom: 35px;
+      width: 100%;
+      min-width: 1400px;
+      border-bottom: 3px solid #A3A3A3;
+      margin-left: -105px;
+
+      .life_cycle_position {
+        padding: 0 60px;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .life_cycle_bt {
+          margin-top: -20px;
+          z-index: 3;
+          border-radius: 40px;
+          width: 40px;
+          height: 40px;
+          border: 4px solid #A3A3A3;
+          background-color: #ffffff;
+        }
+
+        .life_cycle_bt:hover {
+          outline: 3px solid #0D99FF;
+        }
+
+        .life_cycle_bt_on {
+          margin-top: -20px;
+          z-index: 3;
+          border-radius: 40px;
+          width: 40px;
+          height: 40px;
+          border: 6px solid #FFCB25;
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    .life_cycle_text {
+      display: flex;
+      justify-content: space-between;
+
+      .life_active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        border-radius: 20px;
+        width: 80px;
+        height: 37px;
+        background-color: #FFCB25;
+      }
+
+      .life_text_off {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #A3A3A3;
+        width: 80px;
+        height: 37px;
+      }
+    }
+
+
+.pade_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 50px;
+  .pade_title {
+     padding-top: 100px;
+    padding-bottom: 30px;
+  }
+  .pade_center {
+    margin: 0 auto;
+     text-align: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+.pade_dog {
+  margin-top: 70px;
+    margin-left: 140px;
+  display: flex;
+  justify-content: left;
+  .pade_dog_img {
+    width: 50px;
+    height: 50px;
+  }
+  .pade_dog_text {
+     box-shadow: 0 3px 3px -1px #000000;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-left: 20px;
+    width: 500px;
+    border-radius: 50px;
+    background-color: #F6F5F5;
+  }
+}
+.pade_intro {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 140px;
+  display: flex;
+  justify-content: left;
+  .pade_intro_p {
+    text-align: center;
+    margin-left: 7px;
+    font-size: 15px;
+    line-height: 30px;
+    .pade_intro_img {
+      text-align: center;
+      width: 25px;
+      height: 25px;
+      line-height: 30px;
+    }
+  }
+}
+.pade_item_body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .pade_item {
+    text-align: center;
+    width: 100%;
+    max-width: 140px;
+    height: 200px;
+    border-top: 3px solid #000000;
+    .pade_item_img {
+      margin-top: 10px;
+      width: 120px;
+      height: 90px;
+    }
+    .pade_item_title {
+      padding-left: 10px;
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: left;
+    }
+    .pade_item_entitle {
+      padding-left: 10px;
+      color: #797272;
+      font-size: 15px;
+       text-align: left;
+    }
+    .pade_item_price {
+      padding-left: 10px;
+      margin-top: 8px;
+       color: #797272;
+      font-size: 15px;
+       text-align: left;
+    }
+    .pade_item_active {
+      padding-left: 10px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: left;
+      font-size: 12px;
+      .pade_img_size {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+}
+  .pade_price_box_center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .pade_price_box {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      line-height: 100px;
+      height: 100px;
+      border: 5px solid #D9D9D9;
+
+      .pade_price_text {
+        font-size: 18px;
+      }
+
+      .pade_price_p {
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      .pade_price_h {
+        font-size: 26px;
+        color: #FF0000;
+        font-weight: bold;
+      }
+
+      .pade_price_text_c {
+        font-size: 18px;
+        color: #FF0000;
+      }
+    }
+    }
+  .pade_payment_center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .pade_payment {
+      margin-top: 50px;
+      background-color: #FFCB25;
+      font-size: 20px;
+      color: #000000;
+      width: 100%;
+      max-width: 200px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.text_body {
+  border-radius: 5px;
+  height: 350px;
+  width: 200px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px black;
+  margin-top: 50px;
+  text-align: center;
+
+  .text_img {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .textarea {
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+
+.include_dog_login_center {
+  margin-top: 50px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+
+  .include_dog_login_box_text {
+    padding-top: 25px;
+    margin-left: -10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+
+
+.dog_my_body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  .dog_my_content {
+    margin-top: 70px;
+    width: 100%;
+    max-width: 1200px;
+    .dog_my_h1 {
+      width: 100%;
+      text-align: left;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .dog_my_info {
+      width: 100%;
+      padding-left: 220px;
+      padding-top: 80px;
+      font-weight: bold;
+      font-size: 27px;
+      margin-bottom: 10px;
+      .dog_my_profile {
+        display: flex;
+        width: 100%;
+        max-width: 300px;
+        min-width: 300px;
+        height: 160px;
+        background-color: #EEF3FF;
+        border-radius: 10px;
+        .dog_my_profile_left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 132px;
+
+          .dog_my_profile_img {
+            width: 100%;
+            max-width: 76px;
+          }
+        }
+        .dog_my_profile_right {
+          padding-top: 30px;
+          height: 132px;
+          color: #534848;
+          font-size: 16px;
+          .dog_my_profile_right_title {
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: #000000;
+          }
+        }
+      }
+      .dog_my_profile:hover {
+        border: 1px solid #0a53be;
+      }
+      .dog_my_profile_line {
+        width: 100%;
+        max-width: 748px;
+        height: 3px;
+        background-color: #848484;
+        margin-top: 20px;
+        margin-bottom: 25px;
+      }
+      .dog_my_cycle {
+
+      }
+      .dog_my_cycle_link {
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        margin-bottom: 86px;
+        .dog_my_cycle_link_img {
+          width: 36px;
+          height: 36px;
+          margin-right: 10px;
+        }
+        .dog_my_cycle_link_color {
+          margin-left: 10px;
+          color: #000000;
+          background-color: #FFCB25;
+          width: 200px;
+          height: 38px;
+          line-height: 38px;
+          text-align: center;
+          border-radius: 20px;
+          font-weight: bold;
+        }
+        .dog_my_cycle_link_color:hover {
+          border: 2.5px solid #0a53be;
+        }
+      }
+      .dog_my_choice {
+        width: 100%;
+        font-weight: bold;
+        font-size: 27px;
+      }
+      .dog_my_flex {
+        display: flex;
+        margin-top: 10px;
+        .dog_my_link {
+
+        }
+        .dog_my_link:hover {
+          border: 2.5px solid #0a53be;
+           border-radius: 13px;
+        }
+        .dog_my_link2 {
+          margin-left: 20px;
+        }
+        .dog_my_link2:hover {
+          border: 2.5px solid #0a53be;
+          border-radius: 13px;
+        }
+      }
+      .dog_my_page {
+        padding: 31px 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 782px;
+        border: 1px solid #A5A5A5;
+        border-radius: 16px;
+        margin-top: 92px;
+        margin-bottom: 60px;
+        .dog_my_contact {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          font-size: 17px;
+          font-weight: normal;
+          text-align: center;
+
+          .dog_my_contact_img {
+            width: 100%;
+            max-width: 52px;
+            margin-bottom: 8px;
+          }
+        }
+        .dog_my_page_line {
+          width: 2px;
+          height: 88px;
+          background-color: #D6D1D1;
+        }
+      }
+    }
+  }
+}
+
+
+.mide_body {
+  width: 100vw;
+  text-align: center;
+
+  .mide_title_img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 80px;
+  }
+
+  .mide_center {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+
+    .mide_bottiom {
+      margin-top: 20px;
+      display: flex;
+
+      .mide_nav_life {
+        font-weight: 500;
+        font-size: 26px;
+        color: #000000;
+        padding-top: 15px;
+        text-align: center;
+        text-decoration-line: none;
+
+      }
+
+      .mide_nav_mission {
+        margin-left: 20px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-size: 26px;
+        color: #000000;
+        padding-top: 15px;
+        text-align: center;
+        margin-right: 7.5px;
+        border-bottom: 4.5px solid #000000;
+        text-decoration-line: none;
+      }
+    }
+
+    .mission_page {
+      background-color: #F9F9F9;
+      width: 100%;
+      max-width: 1200px;
+      padding-bottom: 50px;
+      margin-bottom: 100px;
+
+      .mide_edu_title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        font-size: 42px;
+        font-weight: bold;
+        text-decoration-line: underline;
+        text-decoration-color: #FFE03E;
+        line-height: 70px;
+        text-underline-offset: 15px;
+        padding-bottom: 10px;
+        text-decoration-thickness: 5px;
+      }
+
+      .mide_mission {
+        padding-left: 171px;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 20px;
+        padding-right: 50px;
+        margin-top: 30px;
+
+        .mide_mi_title {
+          font-size: 33px;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        .mide_pre {
+          padding-left: 15px;
+          margin-top: -15px;
+          font-size: 20px;
+          text-align: left;
+          white-space: pre-line;
+          word_wrap: break-word;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+}
+
+

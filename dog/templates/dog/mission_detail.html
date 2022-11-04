@@ -1,100 +1,36 @@
 
-{% extends 'dog/base.html' %}
 
+{% extends 'dog/base.html' %}
 {% block content %}
 
-    <div class="life_body">
-        <div class="life_center">
-
-            <div class="life_nav_top">
-                <h1 style=" padding-top: 50px; padding-bottom: 30px; font-size: 65px">
-                    <img src="/static/img/mission_name.png"></h1>
-            </div>
-
-            <div class="life_bottom">
-
-            </div>
-
-
-            <div class="life_cycle">
-                <div class="life_cycle_position">
-                    <div class="life_cycle_bt_on" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                    <div class="life_cycle_bt" type="radio">
-                    </div>
-                </div>
-            </div>
-
-            <div class="life_cycle_text">
-                <p class="life_active">0개월</p>
-                <p class="life_text_off">1개월</p>
-                <p class="life_text_off">2개월</p>
-                <p class="life_text_off">3개월</p>
-                <p class="life_text_off">4개월</p>
-                <p class="life_text_off">5개월</p>
-                <p class="life_text_off">6개월</p>
-                <p class="life_text_off">7개월~</p>
-            </div>
-
-            <div class="life_select_title">
-                카테고리 : 환경 및 건강
-                <div class="life_select_between">
-                    {#              관리자페이지에서 이미지 삽입#}
-                    <img class="life_title_img" src="/static/img/img_5.png">
-                    <img class="life_title_img2" src="/static/img/img_6.png">
-                </div>
-            </div>
-            <div class="life_supplies">
-                ※ 필요 용품 : 티슈, 멸균 거즈, 멸균 실, 소독 가위, 꺠끗한 수건, 쓰레기 봉투
-            </div>
-            {#         여기서 부터 관리 내용#}
-
-            {% for life_detail in life_details %}
-                <div class="life_mission">
-
-
-                    <div class="life_page">
-                        <div class="life_mi_title">
-                            <img class="life_icon" src="/static/img/mi_icon.png"> {{ life_detail.sub_title }}
-                        </div>
-                        <div class="life_mi_text">
-                            <div class="life_pre">
-                                {{ life_detail.sub_text }}
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            {% endfor %}
-            <div class="life_button_page">
-                <a href="{% url 'dog:life_edu' %}" class="life_button">
-                    미션 완료
+    <div class="mide_body">
+        <img class="mide_title_img" src="/static/img/misssion_title.png">
+        <div class="mide_center">
+            <div class="mide_bottiom">
+                <a href="{% url "dog:life_edu" %}" class="mide_nav_life">
+                    생애 주기별 교육
+                </a>
+                <a href="{% url "dog:mission_edu" %}" class="mide_nav_mission">
+                    이상행동 교육
                 </a>
             </div>
-
-
-
-
-
-<p class="life_bottom_title">0개월 반려견의 용품 패키지를 알아볼까요?</p>
-        <a href="{% url "dog:package" %}"><img class="life_bottom_img" src="/static/img/img_3.png"></a>
+            <div class="mission_page">
+                <div class="mide_edu_title">
+                    Solution
+                </div>
+                {#         여기서 부터 관리 내용#}
+                {% for mission_detail in mission_details %}
+                    <div class="mide_mission">
+                            <div class="mide_mi_title">
+                                {{ mission_detail.sub_title }}
+                            </div>
+                                <p class="mide_pre">
+                                    {{ mission_detail.sub_text }}
+                                </p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-
-    </div>
     </div>
 
 {% endblock %}

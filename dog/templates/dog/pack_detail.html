@@ -2,24 +2,73 @@
 
 {% block content %}
 
-  {% for life_detail in life_details %}
-                <div class="life_mission">
 
+    <div class="pade_body">
 
-                    <div class="life_page">
-                        <div class="life_mi_title">
-                            <img class="life_icon" src="/static/img/mi_icon.png"> {{ life_detail.sub_title }}
-                        </div>
-                        <div class="life_mi_text">
-                            <div class="life_pre">
-                                {{ life_detail.sub_text }}
-                            </div>
-                        </div>
+        <div class="pade_title">
+           <img class="pack_title_img" src="/static/img/img_8.png">
+        </div>
+   {% comment %}     <div class="pade_center">
 
+            {% include "component/life_cycle.html" %}
+
+        </div>
+{% endcomment %}
+        <div class="pade_dog">
+            <img class="pade_dog_img" src="/static/img/pade_language.png">
+            <div class="pade_dog_text">
+                반려견이 태어났어요!
+            </div>
+        </div>
+        <div class="pade_intro">
+            출산 전 패키지
+            <div class="pade_intro_p">before childbirh package <img class="pade_intro_img"
+                                                                    src="/static/img/pade_active.png"></div>
+        </div>
+
+        <div class="pade_item_body">
+            {% for pack_detail in pack_details %}
+                <div class="pade_item">
+                    <img class="pade_item_img" src="/static/img/img_ready.png">
+                    <div class="pade_item_title">
+                        {{ pack_detail.name }}
                     </div>
-
+                    <div class="pade_item_entitle">
+                        {{ pack_detail.en_name }}
+                    </div>
+                    <div class="pade_item_price">
+                        1234원
+                    </div>
+                    <div class="pade_item_active">
+                        <img class="pade_img_size" src="/static/img/pade_active.png">
+                        선택완료
+                    </div>
                 </div>
-
             {% endfor %}
+
+        </div>
+
+        <div class="pade_price_box_center">
+            <div class="pade_price_box">
+                <div class="pade_price_text">총 상품 가격 </div>
+                <div class="pade_price_p">&nbsp; 5,000</div>
+                <div class="pade_price_text">원 + 총 배송비 </div>
+                <div class="pade_price_p">&nbsp; 2,500</div>
+                <div class="pade_price_text">원 = 총 주문금액 </div>
+                 <div class="pade_price_h">&nbsp; 7,500</div>
+                <div class="pade_price_text_c">원</div>
+            </div>
+        </div>
+
+        <div class="pade_payment_center">
+            <div class="pade_payment">
+                구매하기
+            </div>
+        </div>
+
+
+    </div>
+
+
 
 {% endblock %}

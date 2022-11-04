@@ -22,7 +22,6 @@
                 </a>
             </div>
 
-
                 <div class="life_cycle">
                     <div class="life_cycle_position">
                     <div class="life_cycle_bt_on" type="radio">
@@ -73,19 +72,20 @@
                             {{ life.summary }}
                         </div>
                         <div class="life_list_link">
-                            더 자세히<a href=""><img class="life_click2" src="/static/img/click2.png"></a>
+                            더 자세히<a href="/dog/life_detail/{{ life.pk }}"><img class="life_click2" src="/static/img/click2.png"></a>
                         </div>
                         <div class="life_list_line">
 
                         </div>
                     </div>
                 {% endfor %}
+
             </div>
 
 <p class="life_bottom_title">0개월 반려견의 용품 패키지를 알아볼까요?</p>
+        <a href="{% url "dog:package" %}"><img class="life_bottom_img" src="/static/img/img_3.png"></a>
         </div>
 
         </div>
-    </div>
 
 {% endblock %}

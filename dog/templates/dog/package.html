@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+    <div class="pack_body">
+        <div class="pack_title_size">
+            <img class="pack_title_img" src="/static/img/img_8.png">
+        </div>
+        <div class="pack_list">
+            {% for packs in pack %}
+               <a href="/dog/pack_detail/{{ packs.pk }}">
+                   <img class="pack_img" src="{{ packs.img.url }}">
+               </a>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

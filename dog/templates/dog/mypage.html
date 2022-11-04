@@ -1,6 +1,77 @@
+
 {% extends 'dog/base.html' %}
 
 {% block content %}
 
+    <div class="dog_my_body">
+
+    <div class="dog_my_content">
+        <div class="dog_my_h1">
+            MY PAGE
+        </div>
+        <div class="dog_my_info">
+            MY dog
+            <div class="dog_my_profile">
+                <div class="dog_my_profile_left">
+                    <img class="dog_my_profile_img" src="/static/img/my_pet_profile.png">
+                </div>
+                <div class="dog_my_profile_right">
+                    <div class="dog_my_profile_right_title">
+                         {{ user.pet_name }}
+                    </div>
+                    <div> {{ user.pet_breed }}</div>
+                    <div>{{ user.get_age }}살 <br> {{ user.pet_weight }}kg</div>
+                </div>
+            </div>
+            <div class="dog_my_profile_line">
+
+            </div>
+            <div class="dog_my_cycle">
+                감자의 생애주기
+            </div>
+            <div class="dog_my_cycle_link">
+                <img src="/static/img/my_pet_profile.png" alt="" class="dog_my_cycle_link_img">
+                5개월
+                <div class="dog_my_cycle_link_color">
+                    5개월 미션으로 이동하기
+                </div>
+            </div>
+            <div class="dog_my_choice">
+                Aniway's 추천
+            </div>
+            <div class="dog_my_flex">
+               <a href="{% url "dog:need_edu" %}">
+                   <img class="dog_my_link" src="/static/img/edu_link.png">
+               </a>
+              <a href="{% url "dog:misson_choice" %}">
+                  <img class="dog_my_link2" src="/static/img/edu_link2.png">
+              </a>
+            </div>
+            <div class="dog_my_page">
+                <div class="dog_my_contact">
+                      <a href="{% url "dog:inquiry"%}">
+                          <img class="dog_my_contact_img" src="/static/img/dog_my_contact1.png">
+                      </a>
+                    문의하기
+                </div>
+                <div class="dog_my_page_line"></div>
+                <div  class="dog_my_contact">
+                    <a href="{% url "dog:inquiry"%}"><img class="dog_my_contact_img" src="/static/img/dog_my_contact2.png"></a>
+                    고객센터
+                </div>
+                  <div class="dog_my_page_line"></div>
+                <div  class="dog_my_contact">
+                    <a href="{% url "dog:community"%}"><img class="dog_my_contact_img" src="/static/img/dog_my_contact3.png"></a>
+                    공지사항
+                </div>
+                  <div class="dog_my_page_line"></div>
+                <div  class="dog_my_contact">
+                    <a href="{% url "dog:inquiry"%}"><img class="dog_my_contact_img" src="/static/img/dog_my_contact4.png"></a>
+                    설정
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 {% endblock %}

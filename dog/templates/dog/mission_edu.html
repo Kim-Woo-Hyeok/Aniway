@@ -31,7 +31,7 @@
 
                 {% for mission in missions %}
                     <div class="edu_list_tool">
-                        <img class="edu_list_img" src="{{ mission.profile_img }}">
+                        <img class="edu_list_img" src="{{ mission.profile_img.url }}">
                         <div class="edu_list_title">
                             {{ mission.title }}
                         </div>
@@ -42,7 +42,7 @@
                             {{ mission.summary }}
                         </div>
                         <div class="edu_list_link">
-                            더 자세히<a href=""><img class="click2" src="/static/img/click2.png"></a>
+                            더 자세히<a href="/dog/mission_detail/{{ mission.pk }}"><img class="click2" src="/static/img/click2.png"></a>
                         </div>
                         <div class="edu_list_line">
 
