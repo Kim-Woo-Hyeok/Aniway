@@ -1,0 +1,25 @@
+{% extends 'dog/base.html' %}
+
+{% block content %}
+
+  {% for life_detail in life_details %}
+                <div class="life_mission">
+
+
+                    <div class="life_page">
+                        <div class="life_mi_title">
+                            <img class="life_icon" src="/static/img/mi_icon.png"> {{ life_detail.sub_title }}
+                        </div>
+                        <div class="life_mi_text">
+                            <div class="life_pre">
+                                {{ life_detail.sub_text }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+{% endblock %}
