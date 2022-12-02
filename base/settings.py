@@ -100,7 +100,7 @@ DATABASES = {
         'NAME': 'aniway',
         'USER': 'postgres',
         'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'HOST': '3.37.86.194',
         'PORT': '5432',
     }
 
