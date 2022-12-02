@@ -23,12 +23,14 @@ class UserAdmin(BaseUserAdmin):
                     'pet_neuter',
                     'pet_date_of_birth',
                     'is_admin',
+                    'is_active',
+                    'is_superuser',
                 )
     list_filter = ('is_admin',)
     fieldsets = (
         (None, {'fields': ('email', 'name', 'password')}),
         ('Personal info', {'fields': ('date_of_birth',)}),
-        ('Permissions', {'fields': ('is_admin',)}),
+        ('Permissions', {'fields': ('is_admin', 'is_active', 'is_superuser')}),
     )
 
     add_fieldsets = (

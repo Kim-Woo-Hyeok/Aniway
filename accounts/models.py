@@ -74,9 +74,14 @@ class User(AbstractBaseUser):
         choices=neuter_choices, max_length=20, null=True, blank=True
     )
 
-    pet_date_of_birth = models.DateField()
+    pet_date_of_birth = models.DateField(
+        verbose_name='pet_date_of_birth',
+        null=True,
+    )
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
 
     objects = UserManager()
 
@@ -98,8 +103,4 @@ class User(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return True
-
-    @property
-    def is_staff(self):
-        return self.is_admin
 

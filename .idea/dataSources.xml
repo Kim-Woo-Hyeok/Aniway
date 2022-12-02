@@ -29,5 +29,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/aniway</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="aniway@3.37.86.194" uuid="a9708781-902c-44d2-89b6-965ce5c562f9">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://3.37.86.194:5432/aniway</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
