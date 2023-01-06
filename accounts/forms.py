@@ -9,6 +9,8 @@ class UserCreationForm(forms.ModelForm):
         fields = (
             'email',
             'name',
+            'university',
+            'department',
             'gender',
             'phone',
             'date_of_birth',
@@ -35,6 +37,8 @@ class UserCreationForm(forms.ModelForm):
         email = self.cleaned_data.get("email")
         password1 = self.cleaned_data.get("password1")
         name = self.cleaned_data.get("name")
+        university = self.cleaned_data.get("university")
+        department = self.cleaned_data.get("department")
         gender = self.cleaned_data.get("gender")
         phone = self.cleaned_data.get("phone")
         date_of_birth = self.cleaned_data.get("date_of_birth")
@@ -48,6 +52,8 @@ class UserCreationForm(forms.ModelForm):
         if commit:
             user.email = email
             user.name = name
+            user.university = university
+            user.department = department
             user.gender = gender
             user.phone = phone
             user.date_of_birth = date_of_birth

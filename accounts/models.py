@@ -16,8 +16,17 @@ class User(AbstractBaseUser):
     name = models.CharField(
         verbose_name='name',
         max_length=255,
-        default='',
-        null=True
+        blank=True
+    )
+    university = models.CharField(
+        verbose_name='name',
+        max_length=255,
+        blank=True
+    )
+    department = models.CharField(
+        verbose_name='name',
+        max_length=255,
+        blank=True
     )
 
     GENDER_MAN = "M"
@@ -25,14 +34,13 @@ class User(AbstractBaseUser):
     GENDER_CHOICES = ((GENDER_MAN, "남"), (GENDER_WOMAN, "여"))
 
     gender = models.CharField(
-        choices=GENDER_CHOICES, max_length=2, null=True, blank=True
+        choices=GENDER_CHOICES, max_length=2, blank=True
     )
 
     phone = models.CharField(
         verbose_name='phone',
         max_length=255,
-        default='',
-        null=True
+        blank=True
     )
 
     date_of_birth = models.DateField()
@@ -40,8 +48,7 @@ class User(AbstractBaseUser):
     pet_name = models.CharField(
         verbose_name='pet_name',
         max_length=255,
-        default='',
-        null=True
+        blank=True
     )
 
     pet_MAN = "PET_M"
@@ -49,21 +56,19 @@ class User(AbstractBaseUser):
     PET_CHOICES = ((GENDER_MAN, "수컷"), (GENDER_WOMAN, "암컷"))
 
     pet_gender = models.CharField(
-        choices=PET_CHOICES, max_length=2, null=True, blank=True
+        choices=PET_CHOICES, max_length=2, blank=True
     )
 
     pet_breed = models.CharField(
         verbose_name='pet_breed',
         max_length=255,
-        null=True,
-        default=''
+        blank=True
     )
 
     pet_weight = models.CharField(
         verbose_name='pet_weight',
         max_length=255,
-        null=True,
-        default=''
+        blank=True
     )
 
     YES = "YES"
@@ -71,17 +76,18 @@ class User(AbstractBaseUser):
     neuter_choices = ((YES, "여"), (NO, "부"))
 
     pet_neuter = models.CharField(
-        choices=neuter_choices, max_length=20, null=True, blank=True
+        choices=neuter_choices, max_length=20, blank=True
     )
 
     pet_date_of_birth = models.DateField(
         verbose_name='pet_date_of_birth',
         null=True,
+        blank=True
     )
     is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
-    is_staff = models.BooleanField(default=False)
+    is_admin = models.BooleanField(default=True)
+    is_superuser = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=True)
 
     objects = UserManager()
 

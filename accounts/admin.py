@@ -13,6 +13,8 @@ class UserAdmin(BaseUserAdmin):
     list_display = (
                     'email',
                     'name',
+                    'university',
+                    'department',
                     'gender',
                     'phone',
                     'date_of_birth',
@@ -40,6 +42,8 @@ class UserAdmin(BaseUserAdmin):
                 (
                     'email',
                     'name',
+                    'university',
+                    'department',
                     'gender',
                     'phone',
                     'date_of_birth',

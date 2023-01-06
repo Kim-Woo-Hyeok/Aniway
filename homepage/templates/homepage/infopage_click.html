@@ -1,0 +1,51 @@
+
+{% extends "homepage/base.html" %}
+
+
+{% block content %}
+
+    {% include "homepage/service_navbar.html" %}
+
+    <div class="info_click">
+        <div class="info_click_center">
+            <div class="info_click_title">
+                공지사항
+            </div>
+            <div class="info_click_top">
+                <div class="info_click_top_title">
+                    제목
+                </div>
+                <div class="info_click_top_text">
+                     {{ communitys.title }}
+                </div>
+            </div>
+               <div class="info_click_top">
+                <div class="info_click_top_title">
+                    글쓴이
+                </div>
+                <div class="info_click_top_text">
+                    관리자
+                </div>
+
+            </div>
+               <div class="info_click_top">
+                <div class="info_click_top_title">
+                    작성일
+                </div>
+                <div class="info_click_top_text">
+                    {{ communitys.create|date:"Y.m.d"}}
+                </div>
+            </div>
+
+            <div class="info_click_index">
+{{ communitys.text }}
+                  {% if communitys.img %}
+                        <img class="info_click_index_img" src="{{ communitys.img.url }}">
+                        {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

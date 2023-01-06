@@ -1,0 +1,233 @@
+{% extends 'homepage/base.html' %}
+
+
+{% block content %}
+    <div class="main_banner" id="banner_relative">
+        <input class="btn-radio1" type="radio" name="slide" id="slide1">
+        <input class="btn-radio2" type="radio" name="slide" id="slide2">
+
+            <ul id="imgholder" class="ul_img_list">
+                <li class="li_block">
+                    <img class="main_banner_img" src="/static/homepage_img/main_banner.png">
+                </li>
+                <li class="li_block"><img class="main_banner_img" src="/static/homepage_img/main_banner2.png"></li>
+            </ul>
+        <label class="banner_btn1" for="slide1">
+           <img src="/static/homepage_img/banner_btn1.png">
+        </label>
+
+      <label class="banner_btn2" for="slide2">
+           <img src="/static/homepage_img/banner_btn2.png">
+      </label>
+    </div>
+
+    <div class="main_intro_page">
+    <div class="intro_set">
+        <div class="intro_title">OUR SERVICE</div>
+        <div class="intro_title2">Aniway History</div>
+        <div class="intro_img_set">
+            <div class="intro_img">
+               <a href="https://www.djtp.or.kr/"><img class="intro_img_detail" src="/static/homepage_img/daejeon.png"></a>
+                <div class="intro_img_detail_text">
+                    2022 지역협력 창업 기업  <br>사업화 지원 사업 <br> 1000만원 선정
+                </div>
+            </div>
+             <div class="intro_img">
+               <a href="https://linc.hannam.ac.kr/main.do">
+                   <img class="intro_img_detail" src="/static/homepage_img/link_hannam.png">
+               </a>
+                <div class="intro_img_detail_text">
+                    2022 LINC 3.0 사업 <br> 창업동아리 선정
+                </div>
+            </div>
+              <div class="intro_img">
+                <a href="http://www.u300.or.kr/"><img class="intro_img_detail" src="/static/homepage_img/if300.png"></a>
+                <div class="intro_img_detail_text">
+                    2022 학생창업 유망팀 <br>300 성장트랙 선정
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="team_page">
+        <div class="team_intro_set">
+            <div class="team_title">OUR SERVICE</div>
+            <div class="team_title2">각자 전문분야의 효율적인 분업화를 기반으로<br>
+                우수한 팀워크를 보유하고 있습니다.
+            </div>
+            <div class="team_justify">
+                <img class="team_justify_img" src="/static/homepage_img/team_boss.png">
+                <img class="team_justify_img" src="/static/homepage_img/team_boss2.png">
+            </div>
+            <div class="team_justify_member">
+                <img class="team_justify_img2" src="/static/homepage_img/member1.png">
+                <img class="team_justify_img2" src="/static/homepage_img/member2.png">
+                <img class="team_justify_img2" src="/static/homepage_img/member3.png">
+                <img class="team_justify_img2" src="/static/homepage_img/member4.png">
+            </div>
+        </div>
+    </div>
+
+
+
+ <div class="main_button_center" >
+           <input class="main_auto_button" id="autoBt" onClick="moveAuto()" type="button" value="Click Auto" >
+             <input class="main_stop_button" type="button" value="Stop" onClick="autoStop()">
+             <input style="display: none;"  type id="txt" type="text">
+
+
+    </div>
+    <div class="platform_page">
+        <div class="platform_set">
+            <div class="platform_set_left">
+                <div class="platform_set_left_color">
+                    Mission
+                </div>
+                <div class="platform_set_left_title">
+                    반려견 생애주기별<br>
+                    맞춤 교육 제공
+                </div>
+                <div class="platform_set_left_text_set">
+                    <div class="platform_set_left_text">
+Aniway는 반려견의 생애주기에 따라서
+교육을 제공하고 있습니다. 0~6개월
+그리고 7개월 이후로 생애주기에
+필요한 교육을 개월 수 마다 제공함으로써
+                    </div>
+                    <div class="platform_set_left_text">
+초보 반려인 분들이 강아지를 처음
+입양 시 부터 어떠한 교육을 어떠한
+순서를 통해 훈련시켜야 하는지
+Aniway 플랫폼을 통해 모두 배울 수 있습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="platform_set_right">
+
+ <body onLoad="init()">
+<img id="cat"  src="/static/homepage_img/phone_img1.png" style="position:relative;">
+    </body>
+
+
+            </div>
+        </div>
+    </div>
+
+     <div style="padding-top: 0;" class="platform_page">
+        <div class="platform_set">
+             <div style="text-align: left;" class="platform_set_right2">
+                <img id="dog" style="position: relative;"  src="/static/homepage_img/phone_img2.png">
+            </div>
+            <div class="platform_set_left">
+                <div class="platform_set_left_color">
+                    PACKAGE
+                </div>
+                <div class="platform_set_left_title">
+                    패키지 용품으로<br>
+                    간편히 구매
+                </div>
+                <div class="platform_set_left_text_set">
+                    <div class="platform_set_left_text">
+자신에 강아지에게 어떠한 용품이 필요한지,
+언제 필요한지, 어느정도의 양이 적당한지
+반려인들의 입장에서 항상 고민되는 사항입니다.
+Aniway는 반려인분들이 이러한 걱정,
+고민거리를 덜어들이기 위해 패키지 상품을
+제공합니다.
+                    </div>
+                    <div class="platform_set_left_text">
+또한 저희는 생애주기별 구독 패키지,
+반려인 유형별 맞춤 패키지 상품 등
+다양한 패키지 상품이 존재하기 때문에
+자신에게 잘 맞는 패키지 상품을
+구매하실 수 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div style="padding-top: 0;" class="platform_page">
+        <div class="platform_set">
+            <div class="platform_set_left">
+                <div class="platform_set_left_color">
+                    Mission
+                </div>
+                <div class="platform_set_left_title">
+                    이상행동 유형별<br>
+                    맞춤 교육 제공
+                </div>
+                <div class="platform_set_left_text_set">
+                    <div class="platform_set_left_text">
+반려견들은 환경, 스트레스 등 다양한
+원인으로 인해 분리불안, 짖음, 배변실수
+등 이상행동을 보이는 경우가 많습니다.
+하지만 이상행동들은 유형과 해결방안이
+매우 다양하기 때문에 반려인들은
+자신의 반려견의 이상행동 마다의
+교육방법을 알고 계셔야 합니다.
+                    </div>
+                    <div class="platform_set_left_text">
+그렇지만 너무나도 다양한 이상행동의 유형과
+교육을 숙지하기는 어렵기 때문에 Aniway에서
+이상행동 유형별 맞춤 교육을 통하여 해결방안 및
+추천 용품 정보 등을 제공해 드리고 있습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="platform_set_right">
+                <img id="pet" style="position: relative;"  src="/static/homepage_img/phone_img3.png">
+            </div>
+        </div>
+    </div>
+
+<script>
+
+    var x = 2;
+    var step = 8;
+    var st;
+    var autoBt;
+    var txt;
+    var cat;
+    var dog;
+    var pet;
+
+    function init() {
+        autoBt = document.getElementById("autoBt");
+        txt = document.getElementById("txt");
+        cat = document.getElementById("cat");
+        dog = document.getElementById("dog");
+        pet = document.getElementById("pet");
+    }
+
+    function manual() {
+        x += step;
+        step = (x >= 300 || x <= 7) ? -step : step;
+        cat.style.left = x + "px";
+         dog.style.left = x + "px";
+          pet.style.left = x + "px";
+        txt.value = x;
+    }
+
+    function moveAuto() {
+        x += step;
+        step = (x >= 300 || x <= 7) ? -step : step;
+        cat.style.left = x + "px";
+         dog.style.left = x + "px";
+          pet.style.left = x + "px";
+        txt.value = x;
+        st = setInterval("manual()", 50);
+        autoBt.disabled = true;
+    }
+
+    function autoStop() {
+        clearTimeout(st);
+        autoBt.disabled = false;
+    }
+
+</script>
+
+{% endblock %}
+
