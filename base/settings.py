@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     ".ap-northeast-2.compute.amazonaws.com",
-    ".aniway.shop",
+    "aniway.shop",
+    "www.aniway.shop",
+    ".aniway.shop"
 ]
 
 
